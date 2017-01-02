@@ -2,58 +2,76 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\Gonzalo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_785ae60eb99a565e1e46cf5b968c39ef4162b9c9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="22.0.1"
-        sha1="1821601ddbec5ff125653097812823388700af74">
-        <dex dex="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\pre-dexed\debug\com.android.support-design-22.2.1_f416113b016208c242fa8ee435bcdf7ebca5832f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_74665f31f7c37df6317874fc9aaca2e1d3e0c395.jar" />
+        <dex dex="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.1_2e7745d41d8f0be74bcd7073f15cce0b5f0e5cf4\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_5bc21a153e336d0ef7077973d18ca8a437cf12c1.jar" />
+        sha1="249acdc4793ad135bad5c5d8b08b5caf8aa934fd">
+        <dex dex="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6ea846a762fe2ed328729d06542d9152d95a9ad8\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.1_cc9d0025bef0e8c8ec8284523ca1f0210140d564.jar" />
+        <dex dex="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_6e263a8e7da42502969f381661814ae3466dc53d\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_316a4c679ec0ac0f4c998e31b2c85c9573b93ef6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.1_090a392b8d5efffe37a9e6f9f9f85d02731fb089\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.1_22c863e3d15b4674fcaceba02e5885c3dec16be9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="C:\Users\Gonzalo\Dropbox\IDI\PracticaAndroid\MyBookDatabase\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-22.2.1_1c989ca41ecfa82f9f4d5a81bbfd5e24248227b1.jar" />
+        <dex dex="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.2.1_bd42e9fff34aa82f20f94fcaa7e610b3d48e93f7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="21a80f38bfc6be2e8fdc1283813e26a5ada47d75">
+        <dex dex="C:\Users\oscar\Dropbox\PracticaAndroid\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_dd687602fd12ad247d778dae58c5f1058b775e1b\classes.dex" />
     </item>
 
 </items>
