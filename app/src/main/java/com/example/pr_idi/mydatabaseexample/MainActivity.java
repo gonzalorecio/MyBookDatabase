@@ -29,13 +29,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_view);
 
-        //Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        //myToolbar.setNavigationIcon(R.drawable.abc_ic_menu_moreoverflow_mtrl_alpha);
-
-        //myToolbar.getMenu();
-        //myToolbar.setMenu(R.menu.menu_main,);
-
-
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
 
 
@@ -103,8 +96,10 @@ public class MainActivity extends AppCompatActivity {
                 //book = bookData.createBook(newBook2[nextInt2*2], newBook2[nextInt2*2 + 1]);
                 //Toast.makeText(getApplicationContext(),"Ayyy",Toast.LENGTH_SHORT).show();
                 // After I get the book data, I add it to the adapter
+
                 Intent intent = new Intent(MainActivity.this, AddActivity.class);
                 startActivity(intent);
+
                 //mAdapter.addBook(book);
                 break;
             /*case R.id.delete:
@@ -115,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;*/
         }
+        System.out.println("Fora");
         mAdapter.notifyDataSetChanged();
     }
 
@@ -123,6 +119,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         bookData.open();
+        Log.d("AY","Resume");
+        List<Book> values = bookData.getAllBooks();
+        System.out.println(values);
+        mAdapter = new BooksAdapter(values,bookData);
         super.onResume();
     }
 
@@ -131,7 +131,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         bookData.close();
+        Log.d("AY","Pause");
         super.onPause();
     }
 
+    /*@Override
+    protected void onRestart() {
+        bookData.open();
+        List<Book> values = bookData.getAllBooks();
+        System.out.println(values);
+        mAdapter = new BooksAdapter(values,bookData);
+        super.onRestart();
+    }
+
+    @Override
+    protected void onStart() {
+        bookData.open();
+        List<Book> values = bookData.getAllBooks();
+        System.out.println(values);
+        mAdapter = new BooksAdapter(values,bookData);
+        super.onStart();
+    }*/
 }

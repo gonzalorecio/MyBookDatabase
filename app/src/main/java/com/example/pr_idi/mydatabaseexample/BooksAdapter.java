@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -29,6 +31,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
         public View mView;
         public TextView titleView;
         public TextView authorView;
+        public TextView categoryView;
         public BooksAdapter BA;
 
         public ViewHolder(View v, BooksAdapter _BA) {
@@ -37,6 +40,8 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
             BA = _BA;
             titleView = (TextView) v.findViewById(R.id.title);
             authorView = (TextView) v.findViewById(R.id.author);
+            categoryView= (TextView) v.findViewById(R.id.category);
+
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -71,9 +76,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
                     });
                     // 3. Get the AlertDialog from create()
                     AlertDialog dialog = builder.create();
-
                     dialog.show();
-
 
                     return true;
                 }
@@ -85,6 +88,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
     public BooksAdapter(List<Book> dataset, BookData bookData) {
         booksDataset = dataset;
         this.bookData = bookData;
+
     }
 
     public void addBook(Book book){
@@ -110,7 +114,8 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
         // - replace the contents of the view with that element
         holder.titleView.setText(booksDataset.get(position).getTitle());
         holder.authorView.setText(booksDataset.get(position).getAuthor());
-
+        holder.categoryView.setText(booksDataset.get(position).getCategory().toUpperCase());
+        //System.out.println(booksDataset.get(position).getCategory());
     }
 
     public void removeAt(int position) {

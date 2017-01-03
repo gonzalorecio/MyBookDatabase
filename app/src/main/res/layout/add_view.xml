@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -43,57 +44,133 @@
             android:orientation="vertical"
             android:layout_margin="35dp">
 
+
             <TextView
                 android:text="Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/editText3"
-                android:layout_alignStart="@+id/editText3"
                 android:layout_marginBottom="2px"
                 android:id="@+id/add_textView_title" />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:ems="10"
-                android:layout_below="@+id/toolbar2"
+                android:inputType="textCapWords"
+                android:ems="12"
                 android:layout_alignParentStart="true"
                 android:id="@+id/editText_title"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="25dp"
+                android:hint="Title of the book..."
+                style="@android:style/Widget.Material.EditText"
+                android:capitalize="words" />
+
 
             <TextView
                 android:text="Author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/editText3"
-                android:layout_alignStart="@+id/editText3"
                 android:layout_marginBottom="2px"
                 android:id="@+id/add_textView_author" />
             <EditText
+                android:hint="Author name..."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Name"
+                android:inputType="textCapWords"
                 android:ems="10"
-                android:id="@+id/editText4"
-                android:layout_below="@+id/editText3"/>
+                android:id="@+id/editText_author"
+                android:layout_marginBottom="25dp"
+                android:capitalize="words" />
+
+
+            <TextView
+                android:text="Publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2px"
+                android:id="@+id/add_textView_publisher" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:ems="10"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/editText_publisher"
+                android:hint="Publisher name..."
+                android:capitalize="words" />
+
+            <TextView
+                android:text="Year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2px"
+                android:id="@+id/add_textView_year" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/editText_year"
+                android:singleLine="true"
+                android:hint="Year of publication..."
+                android:capitalize="words" />
+
+
+            <TextView
+                android:text="Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2px"
+                android:id="@+id/add_textView_category" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:ems="10"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/editText_category"
+                android:hint="Category of the book..."
+                android:capitalize="words" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal evaluation"/>
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_gravity="center"
+                android:layout_marginBottom="35dp"
+                style="@android:style/Widget.Material.RatingBar"
+                android:isIndicator="false"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:clickable="true"
+                android:max="5"
+                android:numStars="5" />
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:baselineAligned="true"
-                android:id="@+id/save_btn">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right"
+                android:id="@+id/save_btn"
+                android:paddingBottom="100dp">
+                <Button
+                    android:text="Cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cancel_button"
+                    android:elevation="7dp"/>
                 <Button
                     android:text="Save"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:id="@+id/save_button"
-                    android:layout_marginEnd="0dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true"
                     android:elevation="7dp" />
             </LinearLayout>
 
