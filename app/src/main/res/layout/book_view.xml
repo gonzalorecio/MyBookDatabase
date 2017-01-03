@@ -96,7 +96,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="25dp"
                 android:id="@+id/editText_category"
-                android:hint="Category of the book..." />
+                android:hint="Category of the book..."
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionMode.Title"/>
 
 
             <TextView

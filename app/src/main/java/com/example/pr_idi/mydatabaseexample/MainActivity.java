@@ -107,9 +107,8 @@ public class MainActivity extends AppCompatActivity {
     // of the buttons in main.xml
     public void onClick(View view) {
         @SuppressWarnings("unchecked")
-       // ArrayAdapter<Book> adapter = (ArrayAdapter<Book>) getListAdapter();
         Book book;
-        //Toast.makeText(getApplicationContext(),"oiii",Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),"test",Toast.LENGTH_LONG).show();
         Log.d("AY","View clicada: "+view.getId());
         switch (view.getId()) {
             /*case R.id.add:
@@ -128,13 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //mAdapter.addBook(book);
                 break;
-            /*case R.id.delete:
-                if (getListAdapter().getCount() > 0) {
-                    book = (Book) getListAdapter().getItem(0);
-                    bookData.deleteBook(book);
-                    adapter.remove(book);
-                }
-                break;*/
+
         }
         System.out.println("Fora");
         mAdapter.notifyDataSetChanged();
@@ -148,8 +141,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d("AY","Resume");
         List<Book> values = bookData.getAllBooks();
         System.out.println(values);
-        //mAdapter = new BooksAdapter(values,bookData);
-        //mAdapter.notifyDataSetChanged();
         mAdapter.setBooksDataset(values);
         super.onResume();
     }
