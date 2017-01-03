@@ -12,33 +12,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="22.0.1"
-        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
-        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.4.0_092f8cbe50a24564f1665ace10af6e4d92db19cf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="22.0.1"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_d422178e6eebdeea4bd7c35e398348bd8606fdbf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="22.0.1"
-        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-22.2.1_3fc025d565034bd85c1949e87afe63f8d87093e4.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -75,12 +48,39 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.4.0_092f8cbe50a24564f1665ace10af6e4d92db19cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_d422178e6eebdeea4bd7c35e398348bd8606fdbf.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="22.0.1"
         sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
         <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0_a0ed07c94fa51edac19b6e9a1a352198c0ecd9b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-22.2.1_3fc025d565034bd85c1949e87afe63f8d87093e4.jar" />
     </item>
 
 </items>

@@ -1,6 +1,7 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -26,7 +27,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
-    public static class ViewHolder extends RecyclerView.ViewHolder  {
+    public class ViewHolder extends RecyclerView.ViewHolder  {
         // each data item is just a string in this case
         public View mView;
         public TextView titleView;
@@ -46,8 +47,17 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //Toast.makeText("Anakin",Toast.LENGTH_SHORT);
                     Log.d("AY","short");
+                    Intent intent = new Intent(view.getContext(), BookViewActivity.class);
+                    Book book = BA.getAt(getAdapterPosition());
+                    intent.putExtra("bTitle",book.getTitle());
+                    intent.putExtra("bAuthor",book.getAuthor());
+                    intent.putExtra("bPublisher",book.getPublisher());
+                    intent.putExtra("bYear",book.getYear());
+                    intent.putExtra("bCategory",book.getCategory());
+                    intent.putExtra("bRating",book.getPersonal_evaluation());
+
+                    view.getContext().startActivity(intent);
                 }
             });
             v.setOnLongClickListener(new View.OnLongClickListener() {
@@ -123,6 +133,10 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
         holder.authorView.setText(booksDataset.get(position).getAuthor());
         holder.categoryView.setText(booksDataset.get(position).getCategory().toUpperCase());
         //System.out.println(booksDataset.get(position).getCategory());
+    }
+
+    public Book getAt(int position){
+        return booksDataset.get(position);
     }
 
     public void removeAt(int position) {

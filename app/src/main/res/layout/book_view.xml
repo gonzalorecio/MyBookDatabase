@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="35dp">
+
+
+            <TextView
+                android:text="Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2px"
+                android:id="@+id/add_textView_title" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/editText_title"
+                android:layout_marginBottom="25dp"
+                android:hint="Title of the book..."
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionMode.Title" />
+
+
+            <TextView
+                android:text="Author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2px"
+                android:id="@+id/add_textView_author" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText_author"
+                android:layout_marginBottom="25dp"
+                android:hint="Author of the book..."
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionMode.Title" />
+
+
+            <TextView
+                android:text="Publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2px"
+                android:id="@+id/add_textView_publisher" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/editText_publisher"
+                android:hint="Publisher name..."
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionMode.Title" />
+
+
+            <TextView
+                android:text="Year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2px"
+                android:id="@+id/add_textView_year" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/editText_year"
+                android:hint="Year of publication..."
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionMode.Title" />
+
+
+            <TextView
+                android:text="Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2px"
+                android:id="@+id/add_textView_category" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/editText_category"
+                android:hint="Category of the book..." />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal evaluation"/>
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_gravity="center"
+                android:layout_marginBottom="35dp"
+                style="@android:style/Widget.Material.RatingBar"
+                android:isIndicator="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:clickable="true"
+                android:max="5"
+                android:numStars="5" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right"
+                android:id="@+id/save_btn"
+                android:paddingBottom="100dp">
+                <Button
+                    android:text="Cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cancel_button"
+                    android:elevation="7dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
