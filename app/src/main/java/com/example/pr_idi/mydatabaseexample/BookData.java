@@ -111,12 +111,13 @@ public class BookData implements Serializable{
         // make sure to close the cursor
         cursor.close();
 
-       /* Collections.sort(books, new Comparator<Book>() {
+        Collections.sort(books, new Comparator<Book>() {
             @Override
             public int compare(Book b1, Book b2) {
                 return b1.getCategory().compareTo(b2.getCategory());
             }
-        });*/
+        });
+        System.out.println("BOOKS: " + books);
         return books;
     }
 

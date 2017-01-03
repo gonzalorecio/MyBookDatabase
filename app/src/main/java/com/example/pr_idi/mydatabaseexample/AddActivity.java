@@ -1,5 +1,6 @@
 package com.example.pr_idi.mydatabaseexample;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
@@ -13,6 +14,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +28,7 @@ import java.util.List;
  * Created by Gonzalo on 02/01/2017.
  */
 
-public class AddActivity extends Activity {
+public class AddActivity extends AppCompatActivity {
     private EditText title;
     private EditText author;
     private EditText publisher;
@@ -46,9 +48,7 @@ public class AddActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_view);
 
-
         bookData = new BookData(this);
-
 
         title = (EditText) findViewById(R.id.editText_title);
         author = (EditText) findViewById(R.id.editText_author);
@@ -57,6 +57,15 @@ public class AddActivity extends Activity {
         category = (EditText) findViewById(R.id.editText_category);
         rating = (RatingBar) findViewById(R.id.ratingBar);
 
+        //Toolbar t = (Toolbar) findViewById(R.id.toolbar2);
+        //setSupportActionBar(t);
+        //ActionBar ab = getActionBar();
+        //ab.setHomeButtonEnabled(true);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setTitle("Add a new book");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
 
         Button save = (Button) findViewById(R.id.save_button);
         save.setOnClickListener(new View.OnClickListener() {
@@ -85,8 +94,8 @@ public class AddActivity extends Activity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
 
                     // 2. Chain together various setter methods to set the dialog characteristics
-                    builder.setMessage("Make sure to fill all fields. Write 'Unknown' if you are not sure about a field.")
-                            .setTitle("Empty Fields");
+                    builder.setMessage("Make sure to fill all fields. Write 'Unknown' or '-' if you are not sure about a field.")
+                            .setTitle("Empty Fields Not Allowed");
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             // User clicked OK button
@@ -110,5 +119,9 @@ public class AddActivity extends Activity {
 
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) finish();
+        return super.onOptionsItemSelected(item);
+    }
 }

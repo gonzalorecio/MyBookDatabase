@@ -6,16 +6,21 @@ import java.util.Random;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,11 +28,18 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private BooksAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+
+
     //TEEEEEEEEEEEEEEEEEedEEST
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_view);
+
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setTitle("Book List");
+            //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
 
@@ -49,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
 
 
+
        /* bookData = new BookData(this);
         bookData.open();
 
@@ -65,6 +78,25 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         //return super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        //Listeners
+        MenuItem help = menu.findItem(R.id.help);
+        help.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                return false;
+            }
+        });
+        MenuItem about = menu.findItem(R.id.about);
+        about.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                String message = "Application developed by Gonzalo Recio and Òscar Pons. \n" +
+                                 "Universitat Politècnica de Catalunya, 2017.";
+                Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
+                return true;
+            }
+        });
         return true;
     }
 
@@ -90,13 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 adapter.add(book);
                 break;*/
             case R.id.floatingActionButton:
-                //String[] newBook2 = new String[] { "Miguel Strogoff", "Jules Verne", "Ulysses", "James Joyce", "Don Quijote", "Miguel de Cervantes", "Metamorphosis", "Kafka" };
-                //int nextInt2 = new Random().nextInt(4);
-                // save the new book to the database
-                //book = bookData.createBook(newBook2[nextInt2*2], newBook2[nextInt2*2 + 1]);
-                //Toast.makeText(getApplicationContext(),"Ayyy",Toast.LENGTH_SHORT).show();
                 // After I get the book data, I add it to the adapter
-
                 Intent intent = new Intent(MainActivity.this, AddActivity.class);
                 startActivity(intent);
 
@@ -122,7 +148,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d("AY","Resume");
         List<Book> values = bookData.getAllBooks();
         System.out.println(values);
-        mAdapter = new BooksAdapter(values,bookData);
+        //mAdapter = new BooksAdapter(values,bookData);
+        //mAdapter.notifyDataSetChanged();
+        mAdapter.setBooksDataset(values);
         super.onResume();
     }
 
@@ -134,22 +162,4 @@ public class MainActivity extends AppCompatActivity {
         Log.d("AY","Pause");
         super.onPause();
     }
-
-    /*@Override
-    protected void onRestart() {
-        bookData.open();
-        List<Book> values = bookData.getAllBooks();
-        System.out.println(values);
-        mAdapter = new BooksAdapter(values,bookData);
-        super.onRestart();
-    }
-
-    @Override
-    protected void onStart() {
-        bookData.open();
-        List<Book> values = bookData.getAllBooks();
-        System.out.println(values);
-        mAdapter = new BooksAdapter(values,bookData);
-        super.onStart();
-    }*/
 }

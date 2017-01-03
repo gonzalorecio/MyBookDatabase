@@ -42,6 +42,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
             authorView = (TextView) v.findViewById(R.id.author);
             categoryView= (TextView) v.findViewById(R.id.category);
 
+
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -65,7 +66,6 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
                             // User clicked OK button
                             int position = getAdapterPosition();
                             BA.removeAt(position);
-
                         }
                     });
                     builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -88,11 +88,18 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
     public BooksAdapter(List<Book> dataset, BookData bookData) {
         booksDataset = dataset;
         this.bookData = bookData;
+        notifyDataSetChanged();
 
+    }
+
+    public void setBooksDataset(List<Book> _bookDataset) {
+        this.booksDataset = _bookDataset;
+        notifyDataSetChanged();
     }
 
     public void addBook(Book book){
         booksDataset.add(book);
+        notifyDataSetChanged();
     }
 
     // Create new views (invoked by the layout manager)
