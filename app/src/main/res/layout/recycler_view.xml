@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar">
+    </include>
 
     <!--android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -61,7 +65,8 @@
         android:clickable="true"
         android:longClickable="true"
         android:onClick="onClick"
-        android:touchscreenBlocksFocus="true">
+        android:touchscreenBlocksFocus="true"
+        android:layout_below="@+id/tool_bar">
 
     </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

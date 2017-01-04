@@ -8,7 +8,9 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.ClipData;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +18,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,17 +31,42 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private BooksAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-
+    private ActionBarDrawerToggle mDrawerToggle;
+    private DrawerLayout drawerLayout;
+    private Toolbar toolbar;
 
     //TEEEEEEEEEEEEEEEEEedEEST
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recycler_view);
+        setContentView(R.layout.activity_navigation_drawer);
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
 
         if (getSupportActionBar() != null){
             getSupportActionBar().setTitle("Book List");
-            //getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            mDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, 0, 0)
+            {
+                public void onDrawerClosed(View view)
+                {
+                    supportInvalidateOptionsMenu();
+                    //drawerOpened = false;
+                }
+
+                public void onDrawerOpened(View drawerView)
+                {
+                    supportInvalidateOptionsMenu();
+                    //drawerOpened = true;
+                }
+            };
+
+            mDrawerToggle.setDrawerIndicatorEnabled(true);
+            drawerLayout.setDrawerListener(mDrawerToggle);
+            mDrawerToggle.syncState();
         }
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
@@ -99,7 +127,17 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            drawerLayout.openDrawer(Gravity.LEFT);
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     // Basic method to add pseudo-random list of books so that
@@ -154,5 +192,19 @@ public class MainActivity extends AppCompatActivity {
         bookData.close();
         Log.d("AY","Pause");
         super.onPause();
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState)
+    {
+        super.onPostCreate(savedInstanceState);
+        mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig)
+    {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
     }
 }
