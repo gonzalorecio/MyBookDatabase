@@ -128,12 +128,19 @@
                 android:id="@+id/save_btn"
                 android:paddingBottom="100dp">
                 <Button
-                    android:text="Cancel"
+                    android:text="Back"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:id="@+id/cancel_button"
-                    android:elevation="7dp"/>
+                    android:elevation="9dp"/>
+                <Button
+                    android:text="Delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/delete_button"
+                    android:elevation="9dp"/>
             </LinearLayout>
 
 

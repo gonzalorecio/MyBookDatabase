@@ -96,6 +96,15 @@ public class BookData implements Serializable{
                 + " = " + id, null);
     }
 
+    public Book getBook(String id) {
+        Cursor cursor = database.query(MySQLiteHelper.TABLE_BOOKS,
+                allColumns, MySQLiteHelper.COLUMN_ID+"="+id, null, null, null, null);
+        cursor.moveToFirst();
+        Book book = cursorToBook(cursor);
+        cursor.close();
+        return book;
+    }
+
     public List<Book> getAllBooks() {
         List<Book> books = new ArrayList<>();
 

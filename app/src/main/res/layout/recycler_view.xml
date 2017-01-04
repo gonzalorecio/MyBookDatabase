@@ -39,6 +39,7 @@
         app:fabSize="normal"
         android:id="@+id/floatingActionButton"
         app:backgroundTint="?android:attr/colorMultiSelectHighlight"
+        app:rippleColor="@color/button_material_dark"
         android:layout_alignParentStart="false"
         app:elevation="12dp"
         android:layout_alignParentEnd="true"

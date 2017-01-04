@@ -50,6 +50,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
                     Log.d("AY","short");
                     Intent intent = new Intent(view.getContext(), BookViewActivity.class);
                     Book book = BA.getAt(getAdapterPosition());
+                    intent.putExtra("bId",book.getId());
                     intent.putExtra("bTitle",book.getTitle());
                     intent.putExtra("bAuthor",book.getAuthor());
                     intent.putExtra("bPublisher",book.getPublisher());

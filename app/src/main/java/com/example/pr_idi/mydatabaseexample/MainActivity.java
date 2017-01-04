@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
         help.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
+                Intent intent = new Intent(MainActivity.this,HelpActivity.class);
+                startActivity(intent);
                 return false;
             }
         });

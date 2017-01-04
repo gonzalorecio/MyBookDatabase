@@ -1,14 +1,17 @@
 package com.example.pr_idi.mydatabaseexample;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -23,6 +26,7 @@ public class BookViewActivity extends AppCompatActivity {
     TextView year;
     TextView category;
     RatingBar rating;
+    String id;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,13 +58,55 @@ public class BookViewActivity extends AppCompatActivity {
         year.setText(Integer.toString(intent.getIntExtra("bYear",-1)));
         category.setText(intent.getStringExtra("bCategory"));
         rating.setRating(Float.parseFloat(intent.getStringExtra("bRating")));
-
+        id = Long.toString(intent.getLongExtra("bId",-1));
 
         Button cancel = (Button) findViewById(R.id.cancel_button);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        Button delete = (Button) findViewById(R.id.delete_button);
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                BookData bookData = new BookData(getApplicationContext());
+                System.out.println(id);
+                bookData.open();
+                final Book book = bookData.getBook(id);
+
+                //----------------------Dialog--------------------------------------------
+                // 1. Instantiate an AlertDialog.Builder with its constructor
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                // 2. Chain together various setter methods to set the dialog characteristics
+                builder.setMessage(book.getTitle()+" is going to be deleted.").setTitle("Delete Book");
+                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User clicked OK button
+                        //.removeAt(position);
+                        BookData bookData2 = new BookData(getApplicationContext());
+                        bookData2.open();
+                        bookData2.deleteBook(book);
+                        bookData2.close();
+                        Toast.makeText(getApplicationContext(), book.getTitle()+" has been deleted",
+                                       Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                        dialog.cancel();
+                    }
+                });
+                // 3. Get the AlertDialog from create()
+                AlertDialog dialog = builder.create();
+                dialog.show();
+                //----------------------Dialog--------------------------------------------
+
+                bookData.close();
             }
         });
 

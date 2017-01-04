@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="25dp">
+
+            <TextView
+                android:text="To add a new book to the list, just click on the orange floating button in the main screen:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="normal"
+                android:id="@+id/floatingActionButton"
+                app:backgroundTint="?android:attr/colorMultiSelectHighlight"
+                android:layout_alignParentStart="false"
+                app:elevation="12dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="65px"
+                android:layout_marginEnd="30px"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_add_white_24dp"
+                app:rippleColor="@color/button_material_dark" />
+            <TextView
+                android:text="You can see full information of the book by simply pressing the item in the list."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_marginTop="30dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+            <TextView
+                android:text="To delete a book from the list, you can either long press the item from the list or delete it from inside the book information. "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:layout_marginTop="30dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:gravity="left|fill_horizontal|right"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
