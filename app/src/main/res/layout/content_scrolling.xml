@@ -48,12 +48,12 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/abc_text_size_medium_material"
                     android:textStyle="bold"
-                    android:text="Hello World!" />
+                    android:text="Title of book" />
                 <TextView
                     android:id="@+id/author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hello World!"
+                    android:text="Author name"
                     android:layout_marginBottom="5dp"/>
 
             </LinearLayout>
@@ -64,7 +64,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:maxWidth="90dp"
-                android:text="Hello World!"
+                android:text="CATEGORY"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
 
