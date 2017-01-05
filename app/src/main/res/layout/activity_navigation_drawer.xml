@@ -15,16 +15,34 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         android:elevation="999dp"
         app:headerLayout="@layout/nav_header_navigation_drawer">
 
-        <include layout="@layout/menu_layout"
+        <android.support.v7.widget.RecyclerView
+
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerListNav"
+                tools:listitem="@layout/content_scrolling"
+                android:clickable="true"
+                android:longClickable="true"
+                android:touchscreenBlocksFocus="true"
+                android:paddingTop="@dimen/nav_header_height"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="true"
+            >
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        <!--include layout="@layout/menu_layout"
+            android:id="@+id/nav_menu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"/-->
 
     </android.support.design.widget.NavigationView>
 

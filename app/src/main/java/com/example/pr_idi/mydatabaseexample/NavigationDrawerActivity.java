@@ -19,10 +19,10 @@ import java.util.List;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-        private BookData bookData;
-        private RecyclerView mRecyclerView;
-        private BooksAdapter mAdapter;
-        private RecyclerView.LayoutManager mLayoutManager;
+    private BookData bookData;
+    private RecyclerView mRecyclerView;
+    private BooksAdapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation_drawer);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerListNav);
+        if (mRecyclerView == null) System.out.println("Null recycler view!");
         mRecyclerView.setHasFixedSize(true);
 
         mLayoutManager = new LinearLayoutManager(this);
@@ -38,6 +39,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
         bookData = new BookData(this);
         bookData.open();
         List<Book> values = bookData.getAllBooks();
+        System.out.println(values.size());
         mAdapter = new BooksAdapter(values,bookData);
         mRecyclerView.setAdapter(mAdapter);
 
@@ -77,7 +79,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation_drawer, menu);
+        //getMenuInflater().inflate(R.menu.navigation_drawer, menu);
         return true;
     }
 
@@ -119,5 +121,17 @@ public class NavigationDrawerActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onResume() {
+        bookData.open();
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        bookData.close();
+        super.onPause();
     }
 }

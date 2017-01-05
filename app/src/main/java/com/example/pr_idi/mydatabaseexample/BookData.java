@@ -149,6 +149,31 @@ public class BookData implements Serializable{
         return books;
     }
 
+    public List<Book> getAllBooksOrderedByTitle() {
+        List<Book> books = new ArrayList<>();
+
+        Cursor cursor = database.query(MySQLiteHelper.TABLE_BOOKS,
+                allColumns, null, null, null, null, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Book book = cursorToBook(cursor);
+            books.add(book);
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+
+        Collections.sort(books, new Comparator<Book>() {
+            @Override
+            public int compare(Book b1, Book b2) {
+                return b1.getTitle().compareTo(b2.getTitle());
+            }
+        });
+        System.out.println("BOOKS ordered by title: " + books);
+        return books;
+    }
+
     private Book cursorToBook(Cursor cursor) {
         Book book = new Book();
         book.setId(cursor.getLong(0));

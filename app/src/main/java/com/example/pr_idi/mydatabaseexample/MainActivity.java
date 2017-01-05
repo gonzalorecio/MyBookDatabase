@@ -10,6 +10,7 @@ import android.content.ClipData;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -28,10 +29,14 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
     private BookData bookData;
     private RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerViewNav;
     private BooksAdapter mAdapter;
+    private BooksAdapter mAdapterNav;
     private RecyclerView.LayoutManager mLayoutManager;
+    private RecyclerView.LayoutManager mLayoutManagerNav;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
@@ -102,6 +107,23 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<Book> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, values);
         setListAdapter(adapter);*/
+
+
+        /*############## Navigation Drawer Config #################*/
+        mRecyclerViewNav = (RecyclerView) findViewById(R.id.recyclerListNav);
+        if (mRecyclerViewNav == null) System.out.println("Null recycler view!");
+        mRecyclerViewNav.setHasFixedSize(true);
+
+        mLayoutManagerNav = new LinearLayoutManager(this);
+        if (mLayoutManager.equals(mLayoutManagerNav)) System.out.println("Ahaaaaaaaaaaaaaaaaa");
+        mRecyclerViewNav.setLayoutManager(mLayoutManagerNav);
+
+
+        List<Book> valuesNav = bookData.getAllBooksOrderedByTitle();
+        System.out.println(valuesNav.size());
+        mAdapterNav = new BooksAdapter(valuesNav,bookData);
+        mRecyclerViewNav.setAdapter(mAdapterNav);
+
     }
 
     @Override
@@ -226,6 +248,11 @@ public class MainActivity extends AppCompatActivity {
         List<Book> values = bookData.getAllBooks();
         System.out.println(values);
         mAdapter.setBooksDataset(values);
+
+        List<Book> valuesNav = bookData.getAllBooksOrderedByTitle();
+        System.out.println(valuesNav);
+        mAdapterNav.setBooksDataset(valuesNav);
+
         super.onResume();
     }
 
@@ -250,5 +277,15 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onConfigurationChanged(newConfig);
         mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 }

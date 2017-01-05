@@ -9,17 +9,19 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.RecyclerView
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:id="@+id/recyclerListNav"
             android:background="#FFF"
-            android:scrollbars="vertical"
-            android:fadeScrollbars="true"
             tools:listitem="@layout/content_scrolling"
             android:clickable="true"
             android:longClickable="true"
             android:onClick="onClick"
             android:touchscreenBlocksFocus="true"
-            />
+
+
+            android:layout_alignParentStart="true">
+
+        </android.support.v7.widget.RecyclerView>
     </RelativeLayout>
 </LinearLayout>
