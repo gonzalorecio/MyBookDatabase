@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 String message = "Application developed by Gonzalo Recio and Òscar Pons. \n" +
-                                 "    Universitat Politècnica de Catalunya, 2017.";
+                                 "Universitat Politècnica de Catalunya, 2017.";
                 Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
                 return true;
             }

@@ -117,7 +117,9 @@
                 android:focusable="true"
                 android:clickable="true"
                 android:max="5"
-                android:numStars="5" />
+                android:numStars="5"
+                android:progressTint="@color/colorAccent"
+                android:theme="@style/AppTheme"/>
 
 
             <LinearLayout
