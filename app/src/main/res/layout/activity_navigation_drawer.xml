@@ -20,8 +20,8 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         android:elevation="999dp"
-        app:headerLayout="@layout/nav_header_navigation_drawer"
-        >
+        app:headerLayout="@layout/nav_header_navigation_drawer">
+
         <include layout="@layout/menu_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
