@@ -16,6 +16,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
+    private SearchView searchView;
 
     //TEEEEEEEEEEEEEEEEEedEEST
     @Override
@@ -122,12 +124,54 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 String message = "Application developed by Gonzalo Recio and Òscar Pons. \n" +
-                                 "Universitat Politècnica de Catalunya, 2017.";
+                                 "    Universitat Politècnica de Catalunya, 2017.";
                 Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
                 return true;
             }
         });
 
+        final MenuItem myActionMenuItem = menu.findItem( R.id.search);
+        searchView = (SearchView) myActionMenuItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                System.out.println("Submited " + query);
+
+                List<Book> books = bookData.findBooksByTitle(query);
+                mAdapter.setBooksDataset(books);
+
+                if( ! searchView.isIconified()) {
+                    //searchView.setIconified(true);
+                }
+                //myActionMenuItem.collapseActionView();
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String s) {
+                System.out.println(s);
+                if(s.length()>0) {
+                    List<Book> books = bookData.findBooksByTitle(s);
+                    mAdapter.setBooksDataset(books);
+                }
+                else{
+                    List<Book> books = bookData.getAllBooks();
+                    mAdapter.setBooksDataset(books);
+                }
+                return false;
+            }
+
+        });
+
+        searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                List<Book> books = bookData.getAllBooks();
+                mAdapter.setBooksDataset(books);
+                System.out.println("onClose Search");
+                return true;
+            }
+        });
         return true;
     }
 

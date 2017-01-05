@@ -6,15 +6,19 @@ package com.example.pr_idi.mydatabaseexample;
  */
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 public class BookData implements Serializable{
@@ -104,6 +108,21 @@ public class BookData implements Serializable{
         cursor.close();
         return book;
     }
+
+    public List<Book> findBooksByTitle(String query) {
+        List<Book> books = new  ArrayList<>();
+        Cursor cursor = database.query(MySQLiteHelper.TABLE_BOOKS,
+                allColumns, MySQLiteHelper.COLUMN_TITLE+" LIKE '%"+query+"%'", null, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Book book = cursorToBook(cursor);
+            books.add(book);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return books;
+    }
+
 
     public List<Book> getAllBooks() {
         List<Book> books = new ArrayList<>();

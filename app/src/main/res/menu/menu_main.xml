@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/help"
         android:title="Help"
@@ -8,6 +10,12 @@
         android:id="@+id/about"
         android:title="About"
         />
+
+    <item android:id="@+id/search"
+        android:title="Search"
+        app:showAsAction="always|collapseActionView"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
 
 
 </menu>
