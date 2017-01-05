@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onDrawerClosed(View view)
                 {
                     supportInvalidateOptionsMenu();
+                    onResume();
                     //drawerOpened = false;
                 }
 
@@ -68,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
                 {
                     supportInvalidateOptionsMenu();
                     //drawerOpened = true;
+                    List<Book> valuesNav = bookData.getAllBooksOrderedByTitle();
+                    System.out.println(valuesNav);
+                    mAdapterNav.setBooksDataset(valuesNav);
+
                 }
             };
 
@@ -75,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
             drawerLayout.setDrawerListener(mDrawerToggle);
             mDrawerToggle.syncState();
         }
+
+
+        View main = findViewById(R.id.main_context);
+        View nav = findViewById(R.id.nav_view);
+
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerList);
 
@@ -84,9 +94,8 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
 
         // use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(this);
+        mLayoutManager = new LinearLayoutManager(main.getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
-
         bookData = new BookData(this);
         bookData.open();
         List<Book> values = bookData.getAllBooks();
@@ -114,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
         if (mRecyclerViewNav == null) System.out.println("Null recycler view!");
         mRecyclerViewNav.setHasFixedSize(true);
 
-        mLayoutManagerNav = new LinearLayoutManager(this);
-        if (mLayoutManager.equals(mLayoutManagerNav)) System.out.println("Ahaaaaaaaaaaaaaaaaa");
+        mLayoutManagerNav = new LinearLayoutManager(nav.getContext());
+        //if (mLayoutManager.equals(mLayoutManagerNav)) System.out.println("Ahaaaaaaaaaaaaaaaaa");
         mRecyclerViewNav.setLayoutManager(mLayoutManagerNav);
 
 
@@ -236,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         System.out.println("Fora");
-        mAdapter.notifyDataSetChanged();
+        //mAdapter.notifyDataSetChanged();
     }
 
     // Life cycle methods. Check whether it is necessary to reimplement them
@@ -245,14 +254,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         bookData.open();
         Log.d("AY","Resume");
+
+
+        //List<Book> valuesNav = bookData.getAllBooksOrderedByTitle();
+        //System.out.println(valuesNav);
+        //mAdapterNav.setBooksDataset(valuesNav);
+
         List<Book> values = bookData.getAllBooks();
         System.out.println(values);
         mAdapter.setBooksDataset(values);
-
-        List<Book> valuesNav = bookData.getAllBooksOrderedByTitle();
-        System.out.println(valuesNav);
-        mAdapterNav.setBooksDataset(valuesNav);
-
+        //mAdapter.notifyDataSetChanged();
+        //mAdapterNav.notifyDataSetChanged();
         super.onResume();
     }
 

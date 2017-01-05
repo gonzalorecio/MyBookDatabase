@@ -96,19 +96,22 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public BooksAdapter(List<Book> dataset, BookData bookData) {
+    public BooksAdapter(List<Book> dataset, BookData _bookData) {
         booksDataset = dataset;
-        this.bookData = bookData;
+        bookData = _bookData;
         notifyDataSetChanged();
 
     }
 
     public void setBooksDataset(List<Book> _bookDataset) {
-        this.booksDataset = _bookDataset;
+        //old_dataset = booksDataset.clone();
+        booksDataset = _bookDataset;
         notifyDataSetChanged();
+        //notifyItemInserted();
     }
 
     public void addBook(Book book){
+
         booksDataset.add(book);
         notifyDataSetChanged();
     }
@@ -147,6 +150,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.ViewHolder> 
         bookData.deleteBook(removed_book);
         notifyItemRemoved(position);
         notifyItemRangeChanged(position, booksDataset.size());
+
     }
 
     @Override
