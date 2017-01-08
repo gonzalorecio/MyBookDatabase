@@ -3,9 +3,12 @@ package com.example.pr_idi.mydatabaseexample;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -31,6 +34,7 @@ public class BookViewActivity extends AppCompatActivity {
     RatingBar rating;
     String id;
 
+    LayerDrawable ld;
     boolean edited;
 
     @Override
@@ -112,13 +116,20 @@ public class BookViewActivity extends AppCompatActivity {
             }
         });
 
+        ld = (LayerDrawable) rating.getProgressDrawable();
+        resetColorStars();
         edited = false;
         final FloatingActionButton edit = (FloatingActionButton) findViewById(R.id.floatingActionButtonEdit);
+
         edit.setOnClickListener(new FloatingActionButton.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!edited){
                     edit.setImageResource(R.drawable.tick);
+                    // Change color of stars
+                    DrawableCompat.setTint(DrawableCompat.wrap(ld.getDrawable(2)),
+                            ContextCompat.getColor(getApplicationContext(),
+                                    android.R.color.holo_orange_light));
 
                     rating.setIsIndicator(false);
                     rating.setEnabled(true);
@@ -126,17 +137,25 @@ public class BookViewActivity extends AppCompatActivity {
 
                 }else{
                     edit.setImageResource(android.R.drawable.ic_menu_edit);
+                    resetColorStars();
                     rating.setRating(rating.getRating());
                     rating.setIsIndicator(true);
 
                     BookData bookData = new BookData(getApplicationContext());
                     bookData.open();
                     Book book = bookData.getBook(id);
-                    book.setPersonal_evaluation(Float.toString(rating.getRating()));
+                    bookData.deleteBook(book);
+                    bookData.createBook(title.getText().toString(),
+                            author.getText().toString(),
+                            publisher.getText().toString(),
+                            Integer.parseInt(year.getText().toString()),
+                            category.getText().toString(),
+                            Float.toString(rating.getRating()));
+                    bookData.close();
 
                     Log.d("Edit", "New num stars "+ rating.getRating() );
                     String message = "changes saved successfully";
-                    bookData.close();
+
                     Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
 
                 }
@@ -144,6 +163,14 @@ public class BookViewActivity extends AppCompatActivity {
             }
         });
 
+    }
+    private void resetColorStars(){
+        //Partial star
+        DrawableCompat.setTint(DrawableCompat.wrap(ld.getDrawable(1)),
+                ContextCompat.getColor(getApplicationContext(), android.R.color.background_light));
+        // Custom star
+        DrawableCompat.setTint(DrawableCompat.wrap(ld.getDrawable(2)),
+                ContextCompat.getColor(getApplicationContext(), R.color.colorAccent));
     }
 
     @Override
