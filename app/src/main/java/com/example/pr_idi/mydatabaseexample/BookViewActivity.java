@@ -2,10 +2,13 @@ package com.example.pr_idi.mydatabaseexample;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -28,15 +31,14 @@ public class BookViewActivity extends AppCompatActivity {
     RatingBar rating;
     String id;
 
+    boolean edited;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.book_view);
 
         Intent intent = getIntent();
-
-
-
 
         //ActionBar settings
         if (getSupportActionBar() != null){
@@ -107,6 +109,31 @@ public class BookViewActivity extends AppCompatActivity {
                 //----------------------Dialog--------------------------------------------
 
                 bookData.close();
+            }
+        });
+
+        edited = false;
+        final FloatingActionButton edit = (FloatingActionButton) findViewById(R.id.floatingActionButtonEdit);
+        edit.setOnClickListener(new FloatingActionButton.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!edited){
+                    edit.setImageResource(R.drawable.tick);
+
+                    rating.setIsIndicator(false);
+                    rating.setEnabled(true);
+                    Log.d("Edit", "CLICK " + rating.getRating());
+
+                }else{
+                    edit.setImageResource(android.R.drawable.ic_menu_edit);
+                    rating.setRating(rating.getRating());
+                    rating.setIsIndicator(true);
+                    Log.d("Edit", "New num stars "+ rating.getRating() );
+                    String message = "changes saved successfully";
+                    Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
+
+                }
+                edited = !edited;
             }
         });
 
