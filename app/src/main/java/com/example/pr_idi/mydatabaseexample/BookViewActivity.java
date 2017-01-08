@@ -47,20 +47,20 @@ public class BookViewActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        title = (TextView) findViewById(R.id.editText_title);
-        author = (TextView) findViewById(R.id.editText_author);
-        publisher = (TextView) findViewById(R.id.editText_publisher);
-        year = (TextView) findViewById(R.id.editText_year);
-        category = (TextView) findViewById(R.id.editText_category);
-        rating = (RatingBar) findViewById(R.id.ratingBar);
+        title       = (TextView) findViewById(R.id.editText_title);
+        author      = (TextView) findViewById(R.id.editText_author);
+        publisher   = (TextView) findViewById(R.id.editText_publisher);
+        year        = (TextView) findViewById(R.id.editText_year);
+        category    = (TextView) findViewById(R.id.editText_category);
+        rating      = (RatingBar)findViewById(R.id.ratingBar);
 
-        title.setText(intent.getStringExtra("bTitle"));
-        author.setText(intent.getStringExtra("bAuthor"));
-        publisher.setText(intent.getStringExtra("bPublisher").toUpperCase());
-        year.setText(Integer.toString(intent.getIntExtra("bYear",-1)));
-        category.setText(intent.getStringExtra("bCategory"));
-        rating.setRating(Float.parseFloat(intent.getStringExtra("bRating")));
-        id = Long.toString(intent.getLongExtra("bId",-1));
+        title       .setText(intent.getStringExtra("bTitle"));
+        author      .setText(intent.getStringExtra("bAuthor"));
+        publisher   .setText(intent.getStringExtra("bPublisher").toUpperCase());
+        year        .setText(Integer.toString(intent.getIntExtra("bYear",-1)));
+        category    .setText(intent.getStringExtra("bCategory"));
+        rating      .setRating(Float.parseFloat(intent.getStringExtra("bRating")));
+        id          = Long.toString(intent.getLongExtra("bId",-1));
 
         Button cancel = (Button) findViewById(R.id.cancel_button);
         cancel.setOnClickListener(new View.OnClickListener() {
@@ -128,8 +128,15 @@ public class BookViewActivity extends AppCompatActivity {
                     edit.setImageResource(android.R.drawable.ic_menu_edit);
                     rating.setRating(rating.getRating());
                     rating.setIsIndicator(true);
+
+                    BookData bookData = new BookData(getApplicationContext());
+                    bookData.open();
+                    Book book = bookData.getBook(id);
+                    book.setPersonal_evaluation(Float.toString(rating.getRating()));
+
                     Log.d("Edit", "New num stars "+ rating.getRating() );
                     String message = "changes saved successfully";
+                    bookData.close();
                     Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
 
                 }
