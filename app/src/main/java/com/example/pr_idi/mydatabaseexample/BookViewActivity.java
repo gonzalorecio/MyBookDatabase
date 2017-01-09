@@ -66,14 +66,6 @@ public class BookViewActivity extends AppCompatActivity {
         rating      .setRating(Float.parseFloat(intent.getStringExtra("bRating")));
         id          = Long.toString(intent.getLongExtra("bId",-1));
 
-        Button cancel = (Button) findViewById(R.id.cancel_button);
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
-
         Button delete = (Button) findViewById(R.id.delete_button);
         delete.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -3,21 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_d2c799c44e25f13c62ea2c2e9386ffa9f1c39265\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="1821601ddbec5ff125653097812823388700af74">
-        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_98b169f7be932d82916946941ecc4dad3b58a8e7\classes.dex" />
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_ec69695c9fc678ddda2f282928fb9dac21e642b0\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,15 +39,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_cfbf14e0ab3877f683429a7d58b994008eec9a82\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -75,12 +57,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="d933e2baae1dc8c01cf3d8afe8e879ef794a1d85">
-        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_eff2e2fb0e80178dfe14668d538ec18818c853e0\classes.dex" />
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_a7ee509db96d6bfa06e96270efc5afa70e90d8e4\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -90,6 +72,123 @@
         revision="22.0.1"
         sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
         <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_fe2cd84a9f4e69f009938ebe462da42102434ca2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_7e7517c450abb3fa1003dfdc630f540c861087b7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.2.1_62a6eefd1492dfb3bcfd43ae0a13f948f46fe8ae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.2.1_8f9ed294bcdf3ac16bf49ecbc7222bb71dbc63a9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.2.1_f2e5e22dece828f1a0ae4a92a9fc72dde8bfeef9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="207526b16a7f1e65998c209acee004ca012ade52">
+        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_04af2ea877ff3b45e9229ed4d89debdcc801117b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_253fa1757f0e19881e0c53ac09e60759a3d8a350\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_d2c799c44e25f13c62ea2c2e9386ffa9f1c39265\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_98b169f7be932d82916946941ecc4dad3b58a8e7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_5fda94043ae630a1ab130cfa8a17c757fe976a0a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_cfbf14e0ab3877f683429a7d58b994008eec9a82\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_6a70a46df8d7074e889d45df0ad5f3d82ea0fc4e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_196e47dc25b25000fc3c6c638ac035ef816558bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="d933e2baae1dc8c01cf3d8afe8e879ef794a1d85">
+        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_eff2e2fb0e80178dfe14668d538ec18818c853e0\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -111,15 +210,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_7e7517c450abb3fa1003dfdc630f540c861087b7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -138,12 +228,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="C:\Users\oscar\Desktop\Book\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.2.1_62a6eefd1492dfb3bcfd43ae0a13f948f46fe8ae\classes.dex" />
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_5cd30075c9db61d26d8e954073c74182ab368810\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -165,12 +255,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.2.1_f2e5e22dece828f1a0ae4a92a9fc72dde8bfeef9\classes.dex" />
+        sha1="2da57322877efd2c5c4bfa96955a2c2323f365ea">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_42ec9c6c3aa8c54b4c6cf38adefdc2a88b97a16c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -183,12 +273,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="207526b16a7f1e65998c209acee004ca012ade52">
-        <dex dex="C:\Users\oscar\Desktop\last\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_04af2ea877ff3b45e9229ed4d89debdcc801117b\classes.dex" />
+        sha1="c0e9f8da8516700a8c0b4b7bf33c42730f9ade8d">
+        <dex dex="C:\Users\oscar\Desktop\My\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d0417358969bb34abba8436747158a08b3baeed7\classes.dex" />
     </item>
 
 </items>
