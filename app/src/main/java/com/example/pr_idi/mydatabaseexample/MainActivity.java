@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private SearchView searchView;
 
-    //TEEEEEEEEEEEEEEEEEedEEST
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
