@@ -38,6 +38,7 @@ public class BookViewActivity extends AppCompatActivity {
 
     LayerDrawable ld;
     boolean edited;
+    float currentRating;
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
@@ -73,12 +74,15 @@ public class BookViewActivity extends AppCompatActivity {
         resetColorStars();
         edited = false;
         final FloatingActionButton edit = (FloatingActionButton) findViewById(R.id.floatingActionButtonEdit);
-
+        final FloatingActionButton undo = (FloatingActionButton) findViewById(R.id.floatingActionButtonUndo);
         edit.setOnClickListener(new FloatingActionButton.OnClickListener() {
             @Override
             public void onClick(View v) {
+                currentRating = rating.getRating();
                 if (!edited){
                     edit.setImageResource(R.drawable.tick);
+                    undo.setVisibility(View.VISIBLE);
+
                     // Change color of stars
                     DrawableCompat.setTint(DrawableCompat.wrap(ld.getDrawable(2)),
                             ContextCompat.getColor(getApplicationContext(),
@@ -87,9 +91,11 @@ public class BookViewActivity extends AppCompatActivity {
                     rating.setIsIndicator(false);
                     rating.setEnabled(true);
                     Log.d("Edit", "CLICK " + rating.getRating());
+                    edited = true;
 
                 }else{
                     edit.setImageResource(android.R.drawable.ic_menu_edit);
+                    undo.setVisibility(View.INVISIBLE);
                     resetColorStars();
                     rating.setRating(rating.getRating());
                     rating.setIsIndicator(true);
@@ -110,9 +116,21 @@ public class BookViewActivity extends AppCompatActivity {
                     Log.d("Edit", "New num stars "+ rating.getRating() );
                     String message = "changes saved successfully";
                     Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
+                    edited = false;
 
                 }
-                edited = !edited;
+            }
+        });
+
+        undo.setOnClickListener(new FloatingActionButton.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edit.setImageResource(android.R.drawable.ic_menu_edit);
+                undo.setVisibility(View.INVISIBLE);
+                resetColorStars();
+                rating.setRating(currentRating);
+                rating.setIsIndicator(true);
+                edited = false;
             }
         });
 
