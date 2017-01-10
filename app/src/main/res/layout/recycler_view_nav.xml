@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar">
+    </include>
+
+    <!--android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        app:title="Books"
+        android:elevation="10dp"
+        android:clickable="true" >
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:id="@+id/toolbar_menu_main"
+            android:textColor="#FFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableLeft="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:textAlignment="center"/>
+
+    </android.support.v7.widget.Toolbar-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        android:id="@+id/floatingActionButton"
+        app:backgroundTint="#c22a37"
+        app:rippleColor="@color/button_material_dark"
+        android:layout_alignParentStart="false"
+        app:elevation="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65px"
+        android:layout_marginEnd="30px"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_white_24dp"
+        android:onClick="onClick" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="true"
+        tools:listitem="@layout/content_scrolling_nav"
+        android:clickable="true"
+        android:longClickable="true"
+        android:onClick="onClick"
+        android:touchscreenBlocksFocus="true"
+        android:layout_below="@+id/tool_bar">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

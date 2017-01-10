@@ -5,8 +5,9 @@
     <item
         android:id="@+id/search_by_author"
         android:title="Search by author"
-        app:showAsAction="always|collapseActionView"
+        app:showAsAction="never|collapseActionView"
         app:actionViewClass="android.support.v7.widget.SearchView"/>
+
     <!-- si no poso always no reacciona -->
     <item
         android:id="@+id/help"

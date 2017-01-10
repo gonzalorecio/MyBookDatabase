@@ -35,13 +35,17 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView mRecyclerViewNav;
     private BooksAdapter mAdapter;
-    private BooksAdapter mAdapterNav;
+    private BooksAdapterNav mAdapterNav;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView.LayoutManager mLayoutManagerNav;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private SearchView searchView;
+    private SearchView searchViewAuthor;
+
+    private MenuItem itemSearchTitle;
+    private MenuItem itemSearchAuthor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -130,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
         List<Book> valuesNav = bookData.getAllBooksOrderedByTitle();
         System.out.println(valuesNav.size());
-        mAdapterNav = new BooksAdapter(valuesNav,bookData);
+        mAdapterNav = new BooksAdapterNav(valuesNav,bookData);
         mRecyclerViewNav.setAdapter(mAdapterNav);
 
     }
@@ -139,6 +143,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         //return super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        itemSearchTitle = menu.findItem(R.id.search);
+        itemSearchAuthor = menu.findItem(R.id.search_by_author);
 
         //Listeners
         MenuItem help = menu.findItem(R.id.help);
@@ -166,7 +172,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        //invalidateOptionsMenu();
         if (item.getItemId() == R.id.search) {
+            if (itemSearchAuthor != null ){
+                System.out.println("item author not null");
+                itemSearchAuthor.collapseActionView();
+            }
+            else System.out.println("NULL author");
             searchView = (SearchView) item.getActionView();
             searchView.setQueryHint("Search by title...");
 
@@ -211,9 +223,14 @@ public class MainActivity extends AppCompatActivity {
 
         }
         if (item.getItemId() == R.id.search_by_author){
-            searchView = (SearchView) item.getActionView();
-            searchView.setQueryHint("Search by author...");
-            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            if (itemSearchTitle != null) {
+                System.out.println("item title not null");
+                itemSearchTitle.collapseActionView();
+            }
+            else System.out.println("NULL title");
+            searchViewAuthor = (SearchView) item.getActionView();
+            searchViewAuthor.setQueryHint("Search by author...");
+            searchViewAuthor.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextSubmit(String query) {
 
@@ -225,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public boolean onQueryTextChange(String s) {
                     if(s.length()>0) {
-                        List<Book> books = bookData.findBooksByTitle(s);
+                        List<Book> books = bookData.findBooksByAuthor(s);
                         mAdapter.setBooksDataset(books);
                     }
                     else{
@@ -235,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                     return false;
                 }
             });
-            searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+            searchViewAuthor.setOnCloseListener(new SearchView.OnCloseListener() {
                 @Override
                 public boolean onClose() {
                     List<Book> books = bookData.getAllBooks();
@@ -245,6 +262,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        if (item.getItemId() == android.R.id.home) {
+            drawerLayout.openDrawer(Gravity.LEFT);
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -313,15 +335,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState)
     {
-        super.onPostCreate(savedInstanceState);
         mDrawerToggle.syncState();
+        super.onPostCreate(savedInstanceState);
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig)
     {
-        super.onConfigurationChanged(newConfig);
         mDrawerToggle.onConfigurationChanged(newConfig);
+        super.onConfigurationChanged(newConfig);
     }
 
     @Override
