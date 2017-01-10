@@ -123,6 +123,20 @@ public class BookData implements Serializable{
         return books;
     }
 
+    public List<Book> findBooksByAuthor(String query) {
+        List<Book> books = new  ArrayList<>();
+        Cursor cursor = database.query(MySQLiteHelper.TABLE_BOOKS,
+                allColumns, MySQLiteHelper.COLUMN_AUTHOR + " LIKE '%"+query+"%'",null, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Book book = cursorToBook(cursor);
+            books.add(book);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return books;
+    }
+
 
     public List<Book> getAllBooks() {
         List<Book> books = new ArrayList<>();

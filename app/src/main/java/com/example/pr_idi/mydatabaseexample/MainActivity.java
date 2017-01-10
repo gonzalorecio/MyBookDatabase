@@ -12,6 +12,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -160,56 +161,89 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final MenuItem myActionMenuItem = menu.findItem( R.id.search);
-        searchView = (SearchView) myActionMenuItem.getActionView();
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                System.out.println("Submited " + query);
-
-                List<Book> books = bookData.findBooksByTitle(query);
-                mAdapter.setBooksDataset(books);
-
-                if( ! searchView.isIconified()) {
-                    //searchView.setIconified(true);
-                }
-                //myActionMenuItem.collapseActionView();
-                return false;
-            }
-            @Override
-            public boolean onQueryTextChange(String s) {
-                System.out.println(s);
-                if(s.length()>0) {
-                    List<Book> books = bookData.findBooksByTitle(s);
-                    mAdapter.setBooksDataset(books);
-                }
-                else{
-                    List<Book> books = bookData.getAllBooks();
-                    mAdapter.setBooksDataset(books);
-                }
-                return false;
-            }
-
-        });
-
-        searchView.setOnCloseListener(new SearchView.OnCloseListener() {
-            @Override
-            public boolean onClose() {
-                List<Book> books = bookData.getAllBooks();
-                mAdapter.setBooksDataset(books);
-                System.out.println("onClose Search");
-                return true;
-            }
-        });
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            drawerLayout.openDrawer(Gravity.LEFT);
+        if (item.getItemId() == R.id.search) {
+            searchView = (SearchView) item.getActionView();
+            searchView.setQueryHint("Search by title...");
 
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    System.out.println("Submited " + query);
+
+                    List<Book> books = bookData.findBooksByTitle(query);
+                    mAdapter.setBooksDataset(books);
+
+                    if( ! searchView.isIconified()) {
+                        //searchView.setIconified(true);
+                    }
+                    //myActionMenuItem.collapseActionView();
+                    return false;
+                }
+                @Override
+                public boolean onQueryTextChange(String s) {
+                    if(s.length()>0) {
+                        List<Book> books = bookData.findBooksByTitle(s);
+                        mAdapter.setBooksDataset(books);
+                    }
+                    else{
+                        List<Book> books = bookData.getAllBooks();
+                        mAdapter.setBooksDataset(books);
+                    }
+                    return false;
+                }
+
+            });
+
+            searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+                @Override
+                public boolean onClose() {
+                    List<Book> books = bookData.getAllBooks();
+                    mAdapter.setBooksDataset(books);
+                    System.out.println("onClose Search");
+                    return true;
+                }
+            });
+
+        }
+        if (item.getItemId() == R.id.search_by_author){
+            searchView = (SearchView) item.getActionView();
+            searchView.setQueryHint("Search by author...");
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+
+                    List<Book> books = bookData.findBooksByAuthor(query);
+                    mAdapter.setBooksDataset(books);
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String s) {
+                    if(s.length()>0) {
+                        List<Book> books = bookData.findBooksByTitle(s);
+                        mAdapter.setBooksDataset(books);
+                    }
+                    else{
+                        List<Book> books = bookData.getAllBooks();
+                        mAdapter.setBooksDataset(books);
+                    }
+                    return false;
+                }
+            });
+            searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+                @Override
+                public boolean onClose() {
+                    List<Book> books = bookData.getAllBooks();
+                    mAdapter.setBooksDataset(books);
+                    System.out.println("onClose Search");
+                    return true;
+                }
+            });
         }
         return super.onOptionsItemSelected(item);
     }
