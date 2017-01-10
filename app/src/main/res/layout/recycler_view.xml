@@ -42,7 +42,7 @@
         android:clickable="true"
         app:fabSize="normal"
         android:id="@+id/floatingActionButton"
-        app:backgroundTint="@color/colorAccent"
+        app:backgroundTint="#c22a37"
         app:rippleColor="@color/button_material_dark"
         android:layout_alignParentStart="false"
         app:elevation="12dp"

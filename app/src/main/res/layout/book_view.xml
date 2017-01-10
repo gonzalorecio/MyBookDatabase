@@ -15,6 +15,7 @@
         android:elevation="5dp"
         android:visibility="invisible"
         app:rippleColor="@color/button_material_dark"
+        app:backgroundTint="#c22a37"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"/>
 
@@ -28,6 +29,7 @@
         android:id="@+id/floatingActionButtonEdit"
         android:elevation="5dp"
         app:rippleColor="@color/button_material_dark"
+        app:backgroundTint="#c22a37"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
@@ -148,7 +150,8 @@
                 android:clickable="true"
                 android:max="5"
                 android:numStars="5"
-                android:progressTint="@color/colorAccent"
+                android:progressTint="#fcd594"
+                android:backgroundTint="#c22a37"
                 android:theme="@style/AppTheme"
                 android:paddingBottom="0dp"/>
 

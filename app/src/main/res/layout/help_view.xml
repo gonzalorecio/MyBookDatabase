@@ -27,7 +27,7 @@
                 android:clickable="true"
                 app:fabSize="normal"
                 android:id="@+id/floatingActionButton"
-                app:backgroundTint="?android:attr/colorMultiSelectHighlight"
+                app:backgroundTint="@color/colorAccent"
                 android:layout_alignParentStart="false"
                 app:elevation="12dp"
                 android:layout_gravity="center"
