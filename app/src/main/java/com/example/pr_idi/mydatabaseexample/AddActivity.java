@@ -109,13 +109,13 @@ public class AddActivity extends AppCompatActivity {
             }
         });
 
-        Button cancel = (Button) findViewById(R.id.cancel_button);
+        /*Button cancel = (Button) findViewById(R.id.cancel_button);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
-        });
+        });*/
 
     }
 

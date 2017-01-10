@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/toolbar2">
+        android:layout_below="@+id/my_toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,18 +135,20 @@
                 android:layout_gravity="right"
                 android:id="@+id/save_btn"
                 android:paddingBottom="100dp">
-                <Button
+                <!--<Button
                     android:text="Cancel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:id="@+id/cancel_button"
-                    android:elevation="7dp"/>
+                    android:elevation="7dp"/> -->
                 <Button
                     android:text="Save"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/save_button"
                     android:elevation="7dp" />
             </LinearLayout>

@@ -3,24 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_efbda87fc1c02c7286291c425be313b5de5fe79f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_71dab0940ed733848fc27ef9482c5943327d2e0b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -39,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c47d3203bc3e62e9549dcefba5107cb8c6829527">
+        <dex dex="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6f3c2a9ec9c12259e6761b291a0107636882b742\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -48,12 +39,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="b8250a41782fbb69a4510857d7cc44b7dce515dd">
-        <dex dex="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6f3c2a9ec9c12259e6761b291a0107636882b742\classes.dex" />
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_efbda87fc1c02c7286291c425be313b5de5fe79f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -72,6 +63,15 @@
         revision="22.0.1"
         sha1="1821601ddbec5ff125653097812823388700af74">
         <dex dex="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_1783cd98f10cfa0edd8e90b514ffdd18909db456\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\oscar\Desktop\Marlboro\MyBookDatabase\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_71dab0940ed733848fc27ef9482c5943327d2e0b\classes.dex" />
     </item>
     <item
         is-multidex="true"

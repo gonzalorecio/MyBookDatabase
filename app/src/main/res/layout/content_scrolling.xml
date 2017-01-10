@@ -30,11 +30,11 @@
             android:orientation="horizontal"
             android:weightSum="1">
 
-            <ImageView
+            <!--<ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:id="@+id/book_img"
-                android:src="@drawable/book2"/>
+                android:src="@drawable/book4"/>-->
 
             <LinearLayout
                 android:layout_width="@dimen/snackbar_action_inline_max_width"
@@ -73,7 +73,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#503e3a"
+            android:background="@color/colorPrimaryDark"
             android:id="@+id/view"
             android:layout_marginTop="16dp" />
 
