@@ -14,8 +14,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
@@ -61,16 +63,31 @@ public class AddActivity extends AppCompatActivity {
         //setSupportActionBar(t);
         //ActionBar ab = getActionBar();
         //ab.setHomeButtonEnabled(true);
-        if (getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Add a new book");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        Button save = (Button) findViewById(R.id.save_button);
-        save.setOnClickListener(new View.OnClickListener() {
+        rating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                View view = getCurrentFocus();
+                if (view != null) {
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                }
+            }
+        });
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_add, menu);
+        MenuItem save = menu.findItem(R.id.save_book);
+
+        save.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
                 if (title.getText().length() != 0 &&
                         author.getText().length() != 0 &&
                         publisher.getText().length() != 0 &&
@@ -91,7 +108,7 @@ public class AddActivity extends AppCompatActivity {
 
                 }
                 else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                    AlertDialog.Builder builder = new AlertDialog.Builder(AddActivity.this);
 
                     // 2. Chain together various setter methods to set the dialog characteristics
                     builder.setMessage("Make sure to fill all fields. Write 'Unknown' or '-' if you are not sure about a field.")
@@ -106,6 +123,7 @@ public class AddActivity extends AppCompatActivity {
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 }
+                return true;
             }
         });
 
@@ -116,7 +134,7 @@ public class AddActivity extends AppCompatActivity {
                 finish();
             }
         });*/
-
+        return true;
     }
 
     @Override
