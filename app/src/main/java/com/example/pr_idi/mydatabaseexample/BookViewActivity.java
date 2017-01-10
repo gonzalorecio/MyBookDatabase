@@ -88,8 +88,7 @@ public class BookViewActivity extends AppCompatActivity {
 
                     // Change color of stars
                     DrawableCompat.setTint(DrawableCompat.wrap(ld.getDrawable(2)),
-                            ContextCompat.getColor(getApplicationContext(),
-                                    android.R.color.holo_orange_light));
+                            ContextCompat.getColor(getApplicationContext(), R.color.colorGrey));
 
                     rating.setIsIndicator(false);
                     rating.setEnabled(true);

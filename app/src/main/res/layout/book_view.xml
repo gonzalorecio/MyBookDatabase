@@ -150,8 +150,8 @@
                 android:clickable="true"
                 android:max="5"
                 android:numStars="5"
-                android:progressTint="#fcd594"
-                android:backgroundTint="#c22a37"
+                android:progressTint="@color/colorGrey"
+                android:backgroundTint="@color/colorAccent"
                 android:theme="@style/AppTheme"
                 android:paddingBottom="0dp"/>
 
