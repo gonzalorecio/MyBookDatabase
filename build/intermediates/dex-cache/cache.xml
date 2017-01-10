@@ -11,6 +11,15 @@
         <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.1_5b25d18d337ae730e0757c065a22aaab44bc9363.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="bd4cd4e8a8769cbf48f05ef897df5f499ed5aae3">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_8da77f0f88ab61f234dea709118f6e94e71e1994\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
         jumboMode="false"
@@ -27,6 +36,42 @@
         revision="22.0.1"
         sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
         <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_d422178e6eebdeea4bd7c35e398348bd8606fdbf.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.2.1_3fc025d565034bd85c1949e87afe63f8d87093e4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7e76eb1d6a3cb715db9965bb4e098cd2aa7b1286">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_533a9556f44def336fe334037d6a34a5e8052562\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_092f8cbe50a24564f1665ace10af6e4d92db19cf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_5b25d18d337ae730e0757c065a22aaab44bc9363\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -47,6 +92,15 @@
         <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.android.support-design-22.2.1_304e5f82c6ee55664f9ac704a8c9f94b945f8407.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_304e5f82c6ee55664f9ac704a8c9f94b945f8407\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
         jumboMode="false"
@@ -54,6 +108,15 @@
         revision="22.0.1"
         sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
         <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.0_951a3bb3eec05b834b31e7833bdea59b3c56dd5f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_d422178e6eebdeea4bd7c35e398348bd8606fdbf\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -65,6 +128,15 @@
         <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_78886c43e5336ad65f834a2c2d1e9e2901a3db13.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_951a3bb3eec05b834b31e7833bdea59b3c56dd5f\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\Gonzalo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
         jumboMode="false"
@@ -74,6 +146,24 @@
         <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0_24e3c49852c3ff32514664cfa16b158cc19182bb.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_78886c43e5336ad65f834a2c2d1e9e2901a3db13\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_24e3c49852c3ff32514664cfa16b158cc19182bb\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="false"
@@ -81,6 +171,15 @@
         revision="22.0.1"
         sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
         <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0_a0ed07c94fa51edac19b6e9a1a352198c0ecd9b8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Users\Gonzalo\Desktop\Books\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_a0ed07c94fa51edac19b6e9a1a352198c0ecd9b8\classes.dex" />
     </item>
 
 </items>

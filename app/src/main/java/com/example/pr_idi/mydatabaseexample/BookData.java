@@ -156,7 +156,7 @@ public class BookData implements Serializable{
         Collections.sort(books, new Comparator<Book>() {
             @Override
             public int compare(Book b1, Book b2) {
-                return b1.getCategory().compareTo(b2.getCategory());
+                return b1.getCategory().toUpperCase().compareTo(b2.getCategory().toUpperCase());
             }
         });
         System.out.println("BOOKS: " + books);
@@ -181,7 +181,7 @@ public class BookData implements Serializable{
         Collections.sort(books, new Comparator<Book>() {
             @Override
             public int compare(Book b1, Book b2) {
-                return b1.getTitle().compareTo(b2.getTitle());
+                return b1.getTitle().toUpperCase().compareTo(b2.getTitle().toUpperCase());
             }
         });
         System.out.println("BOOKS ordered by title: " + books);
